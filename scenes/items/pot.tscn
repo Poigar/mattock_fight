@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/img/items/pot_2.png" type="Texture" id=1]
+[ext_resource path="res://scripts/bag.gd" type="Script" id=2]
+[ext_resource path="res://assets/img/ui/bag_inspector.png" type="Texture" id=3]
+[ext_resource path="res://assets/img/items/knife.png" type="Texture" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 45.7207
+
+[node name="pot" type="Sprite" index="0"]
+
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="pot_area" type="Area2D" parent="." index="0" groups=[
+"pots",
+]]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pot_area" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="inspector" type="Sprite" parent="." index="1"]
+
+visible = false
+position = Vector2( 0, -56.4706 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="pot_item" type="Sprite" parent="inspector" index="0"]
+
+position = Vector2( 0, -4.0526 )
+texture = ExtResource( 4 )
+
+

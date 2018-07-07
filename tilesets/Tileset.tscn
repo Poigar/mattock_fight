@@ -1,0 +1,1111 @@
+[gd_scene load_steps=48 format=2]
+
+[ext_resource path="res://assets/img/tilesets/0.png" type="Texture" id=1]
+[ext_resource path="res://assets/img/tilesets/1.png" type="Texture" id=2]
+[ext_resource path="res://assets/img/tilesets/2.png" type="Texture" id=3]
+[ext_resource path="res://assets/img/tilesets/8.png" type="Texture" id=4]
+[ext_resource path="res://assets/img/tilesets/9.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/tilesets/10.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/tilesets/16.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/tilesets/17.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/tilesets/18.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/tilesets/24.png" type="Texture" id=10]
+[ext_resource path="res://assets/img/tilesets/25.png" type="Texture" id=11]
+[ext_resource path="res://assets/img/tilesets/26.png" type="Texture" id=12]
+[ext_resource path="res://assets/img/tilesets/3.png" type="Texture" id=13]
+[ext_resource path="res://assets/img/tilesets/11.png" type="Texture" id=14]
+[ext_resource path="res://assets/img/tilesets/19.png" type="Texture" id=15]
+[ext_resource path="res://assets/img/tilesets/4.png" type="Texture" id=16]
+[ext_resource path="res://assets/img/tilesets/12.png" type="Texture" id=17]
+[ext_resource path="res://assets/img/tilesets/20.png" type="Texture" id=18]
+[ext_resource path="res://assets/img/tilesets/5.png" type="Texture" id=19]
+[ext_resource path="res://assets/img/tilesets/13.png" type="Texture" id=20]
+[ext_resource path="res://assets/img/tilesets/21.png" type="Texture" id=21]
+[ext_resource path="res://assets/img/tilesets/29.png" type="Texture" id=22]
+[ext_resource path="res://assets/img/tilesets/27.png" type="Texture" id=23]
+[ext_resource path="res://assets/img/tilesets/28.png" type="Texture" id=24]
+[ext_resource path="res://assets/img/tilesets/36.png" type="Texture" id=25]
+[ext_resource path="res://assets/img/tilesets/35.png" type="Texture" id=26]
+[ext_resource path="res://assets/img/tilesets/34.png" type="Texture" id=27]
+[ext_resource path="res://assets/img/tilesets/33.png" type="Texture" id=28]
+[ext_resource path="res://assets/img/tilesets/32.png" type="Texture" id=29]
+[ext_resource path="res://assets/img/tilesets/40.png" type="Texture" id=30]
+[ext_resource path="res://assets/img/tilesets/41.png" type="Texture" id=31]
+[ext_resource path="res://assets/img/tilesets/42.png" type="Texture" id=32]
+[ext_resource path="res://assets/img/tilesets/43.png" type="Texture" id=33]
+[ext_resource path="res://assets/img/tilesets/44.png" type="Texture" id=34]
+[ext_resource path="res://assets/img/tilesets/30.png" type="Texture" id=35]
+[ext_resource path="res://assets/img/tilesets/6.png" type="Texture" id=36]
+[ext_resource path="res://assets/img/tilesets/7.png" type="Texture" id=37]
+[ext_resource path="res://assets/img/tilesets/14.png" type="Texture" id=38]
+[ext_resource path="res://assets/img/tilesets/15.png" type="Texture" id=39]
+[ext_resource path="res://assets/img/tilesets/39.png" type="Texture" id=40]
+[ext_resource path="res://assets/img/tilesets/bricks0.png" type="Texture" id=41]
+[ext_resource path="res://assets/img/tilesets/bricks1.png" type="Texture" id=42]
+[ext_resource path="res://assets/img/tilesets/bricks2.png" type="Texture" id=43]
+[ext_resource path="res://assets/img/tilesets/bricks3.png" type="Texture" id=44]
+[ext_resource path="res://assets/img/tilesets/bricks4.png" type="Texture" id=45]
+[ext_resource path="res://assets/img/tilesets/bricks5.png" type="Texture" id=46]
+[ext_resource path="res://assets/img/tilesets/bricks6.png" type="Texture" id=47]
+
+[node name="Tileset" type="Node" index="0"]
+
+[node name="0" type="Sprite" parent="." index="0"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="0" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="0/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -14, -14, -16, 16, -16, 16, 16 )
+
+[node name="1" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 32, 0 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="1/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="2" type="Sprite" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 64, 0 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="2/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 14, -16, 16, -14, 16, 16 )
+
+[node name="3" type="Sprite" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 0, 32 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="3/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="4" type="Sprite" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 32, 32 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="4" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="4/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="5" type="Sprite" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 64, 32 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="5" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="5/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="6" type="Sprite" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 0, 64 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="6" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="6/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 14, -16, -16, 16, -16, 16, 16, -14, 16 )
+
+[node name="7" type="Sprite" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 32, 64 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="7" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="7/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="8" type="Sprite" parent="." index="8"]
+
+editor/display_folded = true
+position = Vector2( 64, 64 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="8" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="8/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 14, 14, 16 )
+
+[node name="9" type="Sprite" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( 0, 96 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="9" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="9/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 12, -16, -12, -13, -16, 16, -16, 16, 16, -13, 16 )
+
+[node name="10" type="Sprite" parent="." index="10"]
+
+editor/display_folded = true
+position = Vector2( 32, 96 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="10" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="10/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="11" type="Sprite" parent="." index="11"]
+
+editor/display_folded = true
+position = Vector2( 64, 96 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="11" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="11/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 13, -16, 16, -12, 16, 12, 13, 16 )
+
+[node name="12" type="Sprite" parent="." index="12"]
+
+editor/display_folded = true
+position = Vector2( 96, 0 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="12" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="12/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 14, -16, -14, -14, -16, 14, -16, 16, -14, 16, 14, 14, 16, -14, 16 )
+
+[node name="13" type="Sprite" parent="." index="13"]
+
+editor/display_folded = true
+position = Vector2( 96, 32 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="13" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="13/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -13, -12, -16, 12, -16, 16, -13, 16, 16, -16, 16 )
+
+[node name="14" type="Sprite" parent="." index="14"]
+
+editor/display_folded = true
+position = Vector2( 96, 64 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="14" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="14/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="15" type="Sprite" parent="." index="15"]
+
+editor/display_folded = true
+position = Vector2( 128, 0 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="15" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="15/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -13, -12, -16, 12, -16, 16, -13, 16, 16 )
+
+[node name="16" type="Sprite" parent="." index="16"]
+
+editor/display_folded = true
+position = Vector2( 128, 32 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="16" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="16/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="17" type="Sprite" parent="." index="17"]
+
+editor/display_folded = true
+position = Vector2( 128, 64 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="17" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="17/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 13, -16, -16, 16, -16, 16, 13, 12, 16, -12, 16 )
+
+[node name="18" type="Sprite" parent="." index="18"]
+
+editor/display_folded = true
+position = Vector2( 160, 0 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="18" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="18/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="19" type="Sprite" parent="." index="19"]
+
+editor/display_folded = true
+position = Vector2( 160, 32 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="19" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="19/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="20" type="Sprite" parent="." index="20"]
+
+editor/display_folded = true
+position = Vector2( 160, 64 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="20" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="20/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="21" type="Sprite" parent="." index="21"]
+
+editor/display_folded = true
+position = Vector2( 160, 96 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="21" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="21/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="22" type="Sprite" parent="." index="22"]
+
+editor/display_folded = true
+position = Vector2( 96, 96 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="22" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="22/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="23" type="Sprite" parent="." index="23"]
+
+editor/display_folded = true
+position = Vector2( 128, 96 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="23" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="23/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="24" type="Sprite" parent="." index="24"]
+
+editor/display_folded = true
+position = Vector2( 128, 128 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="24" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="24/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="25" type="Sprite" parent="." index="25"]
+
+editor/display_folded = true
+position = Vector2( 96, 128 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="25" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="25/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="26" type="Sprite" parent="." index="26"]
+
+editor/display_folded = true
+position = Vector2( 64, 128 )
+texture = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="26" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="26/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="27" type="Sprite" parent="." index="27"]
+
+editor/display_folded = true
+position = Vector2( 32, 128 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="27" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="27/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, 16 )
+
+[node name="28" type="Sprite" parent="." index="28"]
+
+editor/display_folded = true
+position = Vector2( 0, 128 )
+texture = ExtResource( 29 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="28" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="28/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, 16, -16, 16, 16 )
+
+[node name="29" type="Sprite" parent="." index="29"]
+
+editor/display_folded = true
+position = Vector2( 0, 160 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="29" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="29/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16 )
+
+[node name="30" type="Sprite" parent="." index="30"]
+
+editor/display_folded = true
+position = Vector2( 32, 160 )
+texture = ExtResource( 31 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="30" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="30/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16 )
+
+[node name="31" type="Sprite" parent="." index="31"]
+
+editor/display_folded = true
+position = Vector2( 64, 160 )
+texture = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="31" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="31/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -15, -9, -15, -15, -14, -16, -8, -16, -6, -14, 16, -14, 16, -9, -6, -9, -8, -7, -13, -7 )
+
+[node name="32" type="Sprite" parent="." index="32"]
+
+editor/display_folded = true
+position = Vector2( 96, 160 )
+texture = ExtResource( 33 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="32" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="32/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -9, -16, -14, 16, -14, 16, -9 )
+
+[node name="33" type="Sprite" parent="." index="33"]
+
+editor/display_folded = true
+position = Vector2( 128, 160 )
+texture = ExtResource( 34 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="33" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="33/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -9, -16, -14, 6, -14, 8, -16, 14, -16, 16, -14, 16, -12, 15, -9, 13, -7, 9, -7, 6, -9 )
+
+[node name="34" type="Sprite" parent="." index="34"]
+
+editor/display_folded = true
+position = Vector2( 160, 128 )
+texture = ExtResource( 35 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="34" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="34/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 13, -16, -13, -12, -16, 12, -16, 16, -13, 16, 13, 12, 16, -12, 16 )
+
+[node name="35" type="Sprite" parent="." index="35"]
+
+position = Vector2( 192, 0 )
+texture = ExtResource( 36 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="36" type="Sprite" parent="." index="36"]
+
+position = Vector2( 192, 32 )
+texture = ExtResource( 37 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="37" type="Sprite" parent="." index="37"]
+
+position = Vector2( 192, 64 )
+texture = ExtResource( 38 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="38" type="Sprite" parent="." index="38"]
+
+position = Vector2( 192, 96 )
+texture = ExtResource( 39 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="39" type="Sprite" parent="." index="39"]
+
+position = Vector2( 192, 128 )
+texture = ExtResource( 40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="40" type="Sprite" parent="." index="40"]
+
+editor/display_folded = true
+position = Vector2( 224, 0 )
+texture = ExtResource( 41 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="40" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="40/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="41" type="Sprite" parent="." index="41"]
+
+editor/display_folded = true
+position = Vector2( 256, 0 )
+texture = ExtResource( 42 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="41" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="41/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="42" type="Sprite" parent="." index="42"]
+
+editor/display_folded = true
+position = Vector2( 288, 0 )
+texture = ExtResource( 43 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="42" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="42/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
+
+[node name="43" type="Sprite" parent="." index="43"]
+
+editor/display_folded = true
+position = Vector2( 224, 32 )
+texture = ExtResource( 44 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="43" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="43/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -10, -12, -14, -6, -16, 11.0329, -16, 16, -14, 16, 16 )
+
+[node name="44" type="Sprite" parent="." index="44"]
+
+editor/display_folded = true
+position = Vector2( 256, 32 )
+texture = ExtResource( 45 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="44" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="44/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -14, -13, -16, 16, -16, 16, 16 )
+
+[node name="45" type="Sprite" parent="." index="45"]
+
+editor/display_folded = true
+position = Vector2( 288, 32 )
+texture = ExtResource( 46 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="45" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="45/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, 16, -16, -16, 10, -16, 14, -14, 16, -11, 16, 16 )
+
+[node name="46" type="Sprite" parent="." index="46"]
+
+editor/display_folded = true
+position = Vector2( 320, 32 )
+texture = ExtResource( 47 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="StaticBody2D" parent="46" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="polygon" type="CollisionPolygon2D" parent="46/body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -7, 16, -7, -2, -2, -8, 2, -8, 7, -2, 7, 16 )
+
+[node name="47" type="Sprite" parent="." index="47"]
+
+modulate = Color( 0.335938, 0.335938, 0.335938, 1 )
+position = Vector2( 320, 0 )
+texture = ExtResource( 42 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+
