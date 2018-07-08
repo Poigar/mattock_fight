@@ -5,6 +5,7 @@
 
 [node name="homeScreen" type="Node" index="0"]
 
+editor/display_folded = true
 script = ExtResource( 1 )
 
 [node name="background" type="TextureRect" parent="." index="0"]

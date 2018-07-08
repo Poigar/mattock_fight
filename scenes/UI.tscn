@@ -13,7 +13,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="istrm_slot" type="Container" parent="." index="0"]
+[node name="item_slots" type="Container" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -27,7 +27,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="slot_0" type="Sprite" parent="istrm_slot" index="0"]
+[node name="slot_0" type="Sprite" parent="item_slots" index="0"]
 
 position = Vector2( 1860, 13 )
 scale = Vector2( 1.5, 1.5 )
@@ -35,7 +35,7 @@ texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 
-[node name="slot_1" type="Sprite" parent="istrm_slot" index="1"]
+[node name="slot_1" type="Sprite" parent="item_slots" index="1"]
 
 position = Vector2( 1805, 13 )
 scale = Vector2( 1.5, 1.5 )
@@ -43,7 +43,7 @@ texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 
-[node name="slot_2" type="Sprite" parent="istrm_slot" index="2"]
+[node name="slot_2" type="Sprite" parent="item_slots" index="2"]
 
 position = Vector2( 1750, 13 )
 scale = Vector2( 1.5, 1.5 )
@@ -51,7 +51,7 @@ texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 
-[node name="slot_3" type="Sprite" parent="istrm_slot" index="3"]
+[node name="slot_3" type="Sprite" parent="item_slots" index="3"]
 
 position = Vector2( 1695, 13 )
 scale = Vector2( 1.5, 1.5 )

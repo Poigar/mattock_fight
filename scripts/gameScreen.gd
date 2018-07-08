@@ -36,10 +36,16 @@ remote func _setup_game(spawnpoints):
 	
 	var player_scene = load("res://scenes/player/Player.tscn")
 	
+	print("===================")
+	print("Private id: " + str(private_info.id))
+	print("===================")
+	
 	for player in players:
 		
 		var tmp_id = players[player].id
 		var spawnpos = get_node("spawnpoints/spawn"+str(spawnpoints[tmp_id])).position
+		
+		print("Tmp_id: " + str(tmp_id))
 		
 		var tmp_player = player_scene.instance()
 		
@@ -47,17 +53,17 @@ remote func _setup_game(spawnpoints):
 		tmp_player.position = spawnpos
 		tmp_player.set_network_master(tmp_id)
 		
-		if(tmp_id == private_info.id):
+		if(tmp_id == get_tree().get_network_unique_id()):
 			print("camera setup " + str(tmp_id))
 			tmp_player._use_camera(true)
 		
 		add_child(tmp_player)
-		
-		_player_ready(private_info.id)
+
 
 	if(!get_tree().is_network_server()):
 		rpc_id(1,"_player_ready",private_info.id)
-
+	else:
+		_player_ready(private_info.id)
 
 
 

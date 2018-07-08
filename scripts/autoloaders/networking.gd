@@ -78,6 +78,7 @@ func stop_host():
 func join(ip,port,nickname):
 	print("Try to join")
 	
+	
 	var host = NetworkedMultiplayerENet.new()
 	host.set_compression_mode(NetworkedMultiplayerENet.COMPRESS_RANGE_CODER)
 	
@@ -86,9 +87,12 @@ func join(ip,port,nickname):
 	if(!error == OK):
 		return false
 	
+	print("no error")
+	
 	get_tree().set_network_peer(host)
 	get_tree().set_meta("network_peer", host)
 
+	
 	private_info.nickname = nickname
 	private_info.type = "client"
 	
@@ -97,7 +101,7 @@ func join(ip,port,nickname):
 
 
 func _player_connected(id):
-	print("New player")
+	print("New player connected")
 	server_info.players_joined += 1
 	rpc("update_server_info",server_info)
 
@@ -114,7 +118,7 @@ func _player_disconnected(id):
 func _connected_ok():
 	print("Player connected")
 	private_info.id = get_tree().get_network_unique_id()
-	rpc_id(1,"get_server_info",private_info.id)
+	rpc_id(1,"get_server_info",private_info)
 
 
 
@@ -136,9 +140,10 @@ func _server_disconnected():
 
 
 
-remote func get_server_info(id):
+remote func get_server_info(new_private_information):
 	print("Get server info")
-	rpc_id(id,"set_server_info",server_info,players)
+	players[new_private_information.id] = new_private_information
+	rpc_id(new_private_information.id,"set_server_info",server_info,players)
 
 
 
