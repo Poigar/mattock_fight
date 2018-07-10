@@ -28,7 +28,7 @@ var player_area = null
 
 var pots_inspected = [] #Keeps a record of opened pots to close them on area leave
 
-
+onready var private_info = networking.private_info
 
 
 
@@ -49,8 +49,6 @@ func _ready():
 func _physics_process(delta):
 	
 	if is_network_master():
-#		print("hola")
-	
 		_check_area_overlap()
 		_calc_gravity(delta)
 		_calc_movement(delta)
@@ -101,9 +99,11 @@ func _calc_jump_force(delta):
 func _input(event):
 	
 	_handle_zoom()
+	_handle_weapon_selection()
 	
-	if event.is_action("player_throw") && is_network_master():
+	if event.is_action("player_throw") && is_network_master() && has_ammo():
 		_handle_aim()
+		Inventory.inventory[str(Inventory.current_weapon)]-=1
 	
 	
 
@@ -112,19 +112,32 @@ func _input(event):
 func _check_area_overlap():
 	
 	var overlapping_areas = player_area.get_overlapping_areas()
+	var overlapping_bodies = player_area.get_overlapping_bodies()
 	
 	if overlapping_areas.size() > 0:
 	
 		for area in overlapping_areas:
-			if area.is_in_group("pots"):
+			if area.is_in_group("pots") && area.get_parent().item_amount > 0:
 				area.get_parent().open_inspector()
 				pots_inspected.append(area)
 				
+				if Input.is_action_just_pressed("player_interact"):
+					Inventory.pickup_item(area.get_parent())
 	else:
 		
 		for pot in pots_inspected:
 			pot.get_parent().close_inspector()
 			pots_inspected.remove(pots_inspected.find(pot))
+
+	if overlapping_bodies.size() > 0:
+		
+		for body in overlapping_bodies:
+			if body.is_in_group("weapons"):
+				
+				if !body.qued && body.owner_id!=private_info.id:
+					print("Get hit")
+					body.qued = true
+					body.queue_free()
 
 
 
@@ -148,23 +161,36 @@ func _handle_aim():
 	if mouse_pos.y > max_bullet_speed:
 		mouse_pos.y = max_bullet_speed
 		
-	rpc("_spawn_bullet",$aim.global_position,mouse_pos*bullet_speed_multiplier)
+	rpc("_spawn_bullet",$aim.global_position,mouse_pos*bullet_speed_multiplier,private_info.id)
 
 
 
 
 
-sync func _spawn_bullet(pos,impulse):
+master func has_ammo():
+	
+	if Inventory.inventory[str(Inventory.current_weapon)] > 0:
+		return true
+
+
+
+
+sync func _spawn_bullet(pos,impulse,owner):
 	
 	var bullet = preload("res://scenes/weapons/snowball.tscn").instance()
 	bullet.position = pos
+	bullet.owner_id = owner
 	bullet.apply_impulse(Vector2(0,0),impulse)
 	bullet.add_force(Vector2(0,0),BULLET_GRAVITY)
 	bullet.add_collision_exception_with(self)
 	get_parent().add_child(bullet)
 
 
-func _handle_zoom():
+
+
+
+master func _handle_zoom():
+	
 	if Input.is_action_pressed("camera_zoom_out"):
 		var current_zoom_level = camera.get_zoom()
 		if current_zoom_level.x < camera_min_zoom:
@@ -175,3 +201,21 @@ func _handle_zoom():
 		var current_zoom_level = camera.get_zoom()
 		if current_zoom_level.x > camera_max_zoom:
 			camera.set_zoom(Vector2(current_zoom_level.x - camera_zoom_intensity, current_zoom_level.y - camera_zoom_intensity) )
+
+
+
+
+
+master func _handle_weapon_selection():
+	
+	if Input.is_action_just_pressed("player_select_item_0"):
+		Inventory.current_weapon = 0
+	if Input.is_action_just_pressed("player_select_item_1"):
+		Inventory.current_weapon = 1
+	if Input.is_action_just_pressed("player_select_item_2"):
+		Inventory.current_weapon = 2
+
+
+
+
+

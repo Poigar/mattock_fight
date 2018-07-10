@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/img/player/test.png" type="Texture" id=2]
@@ -9,11 +9,6 @@ custom_solver_bias = 0.0
 radius = 10.0
 height = 40.8814
 
-[sub_resource type="CircleShape2D" id=2]
-
-custom_solver_bias = 0.0
-radius = 19.1434
-
 [node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
@@ -22,8 +17,6 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform", "collision" ]
-use_camera = true
-play_test = false
 
 [node name="cam" type="Camera2D" parent="." index="0"]
 
@@ -58,12 +51,12 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="shape" type="CollisionShape2D" parent="." index="2"]
 
+visible = false
 position = Vector2( -10.0149, 1.9941 )
 shape = SubResource( 1 )
 
 [node name="area" type="Area2D" parent="." index="3"]
 
-visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -72,9 +65,10 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="shape" type="CollisionShape2D" parent="area" index="0"]
+[node name="shape" type="CollisionPolygon2D" parent="area" index="0"]
 
-shape = SubResource( 2 )
+build_mode = 0
+polygon = PoolVector2Array( -22, 32, -22, -4, -12, -4, -12, -30, 16, -30, 16, -4, 2, -4, 2, 32 )
 
 [node name="aim" type="Position2D" parent="." index="4"]
 

@@ -1,8 +1,7 @@
 extends Sprite
 
-var type = 0
-var item_id = 0
-var item_info = null
+var item_icon = 'snowball'
+var item_amount = 5
 
 var inspector = null
 
@@ -11,14 +10,10 @@ func _ready():
 
 func _init_item():
 	
-	set_texture(load("res://assets/img/items/pot_"+str(type)+".png"))
+	set_texture(load("res://assets/img/items/pot_0.png"))
 	
-	var db = get_node("/root/item_db").get_db()
-	var item = db[""+str(item_id)+""]
-
 	inspector = get_node("inspector")
-
-	inspector.get_node("pot_item").set_texture(load("res://assets/img/items/"+item.icon+".png"))
+	inspector.get_node("pot_item").set_texture(load("res://assets/img/items/"+item_icon+".png"))
 
 
 func open_inspector():
@@ -28,3 +23,10 @@ func open_inspector():
 
 func close_inspector():
 	inspector.hide()
+
+
+
+
+remote func empty_pot():
+	print("empty pot")
+	item_amount = 0

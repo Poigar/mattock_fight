@@ -3,36 +3,8 @@ extends CanvasLayer
 var pregame_msg = null
 
 
-var player_inventory = {
-	"0": {
-		"id": 0,
-		"icon": "",
-		"amount": 0
-	},
-	"2": {
-		"id": 0,
-		"icon": "",
-		"amount": 0
-	},
-	"3": {
-		"id": 0,
-		"icon": "",
-		"amount": 0
-	},
-	"4": {
-		"id": 0,
-		"icon": "",
-		"amount": 0
-	}
-}
-
-var current_slot = 0
-var slots = null
-
-
 func _ready():
 	
-	slots = get_node("item_slots")
 	set_process_input(true)
 
 
